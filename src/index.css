@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -108,4 +108,257 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #34291f;
+  background: #f7f1e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --cream: #f7f1e8;
+  --ivory: #fffdf9;
+  --sand: #e9dccb;
+  --brown: #6e4f3a;
+  --brown-dark: #493426;
+  --muted: #897b6d;
+  --border: #e8ded2;
+  --success: #536c4c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--cream);
+  color: #34291f;
+  font-family: 'DM Sans', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  transition: background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--brown-dark);
+}
+
+h1 {
+  letter-spacing: -0.04em;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: var(--brown);
+}
+
+.bg-light {
+  background-color: var(--cream) !important;
+}
+
+.bg-white {
+  background-color: var(--ivory) !important;
+}
+
+.text-secondary,
+.text-muted {
+  color: var(--muted) !important;
+}
+
+.text-bg-light {
+  background-color: #f1e7da !important;
+  color: var(--brown) !important;
+}
+
+.navbar {
+  background: rgba(255, 253, 249, 0.96) !important;
+  border-color: var(--border) !important;
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.card {
+  background: var(--ivory);
+  border: 1px solid var(--border) !important;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(73, 52, 38, 0.045) !important;
+}
+
+.card-img-top {
+  background: #f4ede3;
+  border-radius: 14px;
+}
+
+.card-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-dark {
+  background-color: var(--brown-dark);
+  border-color: var(--brown-dark);
+}
+
+.btn-dark:hover,
+.btn-dark:focus-visible {
+  background-color: var(--brown);
+  border-color: var(--brown);
+}
+
+.btn-outline-dark {
+  color: var(--brown-dark);
+  border-color: #cdbba8;
+}
+
+.btn-outline-dark:hover {
+  background: var(--brown-dark);
+  border-color: var(--brown-dark);
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: var(--brown);
+  border-color: #d8c8b7;
+}
+
+.btn-outline-secondary:hover {
+  background: var(--sand);
+  border-color: var(--sand);
+  color: var(--brown-dark);
+}
+
+.btn-outline-danger {
+  border-color: #d7aaa0;
+}
+
+.btn-success {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.form-control,
+.form-select {
+  min-height: 46px;
+  padding: 0.7rem 0.9rem;
+  color: var(--brown-dark);
+  background-color: #fffdf9;
+  border: 1px solid #dfd2c3;
+  border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(110, 79, 58, 0.12);
+  background-color: #fffdf9;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: var(--brown);
+}
+
+.form-range::-moz-range-thumb {
+  background: var(--brown);
+}
+
+.form-label {
+  color: #574436;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.badge {
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.alert-danger {
+  border-radius: 12px;
+}
+
+.spinner-border {
+  color: var(--brown) !important;
+}
+
+#cart,
+#checkout {
+  scroll-margin-top: 100px;
+}
+
+::selection {
+  background: #dfcbb5;
+  color: #34291f;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
